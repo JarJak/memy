@@ -8,7 +8,7 @@ https://www.facebook.com/groups/508740382611596/
 1.0 FEATURES:
 ------------
 1. Prosta oprawa graficzna oparta o Twitter Bootstrap
-	- przykadowy styl: http://startbootstrap.com/template-overviews/4-col-portfolio/
+	- przykladowy styl: http://startbootstrap.com/template-overviews/4-col-portfolio/
 	- górne menu:
 		- przeglądaj (główna)
 		- dodaj
@@ -26,7 +26,7 @@ https://www.facebook.com/groups/508740382611596/
 	- sortuj listę: alfabetycznie, po największej ilości tagów
 6. Użytkownicy z FOSUserBundle z sensownymi rolami/uprawnieniami
 7. Prosty panel admina oparty na CRUDzie
-  - przykadowy styl: http://startbootstrap.com/template-overviews/sb-admin/
+  - przykladowy styl: http://startbootstrap.com/template-overviews/sb-admin/
 8. Losuj mema
 9. Taguj - wybiera mema z najmniejszą ilością tagów i pozwala go edytować
 10. Przy każdym dodanym obrazku/tagu/powiązaniu należy w bazie zapisać IP i datę (do wglądu w panelu admina)
