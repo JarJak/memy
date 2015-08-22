@@ -46,3 +46,5 @@ https://www.facebook.com/groups/508740382611596/
 3. Widok listy:
   - możliwość pobrania wszystkich memów pod danym tagiem (z sensownym limitem)
 4. Logowanie przez FB OAuth - na stronę i do panelu
+  - opcja widoku moje memy
+  - dodawanie memów do ulubionych
