@@ -16,7 +16,15 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
+            
+            /* added bundles below */
+            new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            
+            /* Memy Bundles Below */
+            new Memy\CoreBundle\MemyCoreBundle(),
+            new Memy\MemeBundle\MemyMemeBundle(),
+            new Memy\UserBundle\MemyUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -1,3 +1,11 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+memy_user:
+    resource: "@MemyUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+memy_meme:
+    resource: "@MemyMemeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+memy_core:
+    resource: "@MemyCoreBundle/Resources/config/routing.yml"
+    prefix:   /

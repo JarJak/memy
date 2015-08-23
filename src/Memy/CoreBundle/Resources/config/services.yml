@@ -1,0 +1,4 @@
+services:
+#    memy_core.example:
+#        class: Memy\CoreBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
