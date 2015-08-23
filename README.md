@@ -8,6 +8,7 @@ https://www.facebook.com/groups/508740382611596/
 1.0 FEATURES:
 ------------
 1. Prosta oprawa graficzna oparta o Twitter Bootstrap
+	- przykladowy styl: http://startbootstrap.com/template-overviews/4-col-portfolio/
 	- górne menu:
 		- przeglądaj (główna)
 		- dodaj
@@ -25,6 +26,7 @@ https://www.facebook.com/groups/508740382611596/
 	- sortuj listę: alfabetycznie, po największej ilości tagów
 6. Użytkownicy z FOSUserBundle z sensownymi rolami/uprawnieniami
 7. Prosty panel admina oparty na CRUDzie
+  - przykladowy styl: http://startbootstrap.com/template-overviews/sb-admin/
 8. Losuj mema
 9. Taguj - wybiera mema z najmniejszą ilością tagów i pozwala go edytować
 10. Przy każdym dodanym obrazku/tagu/powiązaniu należy w bazie zapisać IP i datę (do wglądu w panelu admina)
@@ -44,3 +46,5 @@ https://www.facebook.com/groups/508740382611596/
 3. Widok listy:
   - możliwość pobrania wszystkich memów pod danym tagiem (z sensownym limitem)
 4. Logowanie przez FB OAuth - na stronę i do panelu
+  - opcja widoku moje memy
+  - dodawanie memów do ulubionych
