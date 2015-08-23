@@ -11,3 +11,4 @@
 /web/bundles/
 /nbproject/
 composer.lock
+*.php~
