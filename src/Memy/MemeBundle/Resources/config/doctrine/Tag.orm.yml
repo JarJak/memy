@@ -1,0 +1,46 @@
+Memy\MemeBundle\Entity\Tag:
+    type: entity
+    table: tag
+    repositoryClass: Memy\MemeBundle\Repository\TagRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    
+    fields:
+        name:
+            type: string
+            length: 255
+        memeCount:
+            type: integer
+        userIp:
+            type: string
+            length: 255
+        insertedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                on: update
+            
+    uniqueConstraints:
+        unique_name:
+            columns: [ name ]
+    
+    manyToOne:
+        user:
+            targetEntity: Memy\UserBundle\Entity\User
+            inversedBy: tags
+
+    manyToMany:
+        memes:
+            targetEntity: Memy\MemeBundle\Entity\Meme
+            mappedBy: tags
+    
+    lifecycleCallbacks: {  }

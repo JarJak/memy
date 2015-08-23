@@ -21,16 +21,6 @@ class User extends BaseUser
      */
     private $tags;
     
-    /**
-     * @var \DateTime
-     */
-    private $insertedAt;
-
-    /**
-     * @var \DateTime
-     */
-    private $updatedAt;
-    
     
     public function __construct()
     {
@@ -93,51 +83,5 @@ class User extends BaseUser
     public function getTags()
     {
         return $this->tags;
-    }
-
-    /**
-     * Set insertedAt
-     *
-     * @param \DateTime $insertedAt
-     * @return User
-     */
-    public function setInsertedAt($insertedAt)
-    {
-        $this->insertedAt = $insertedAt;
-
-        return $this;
-    }
-
-    /**
-     * Get insertedAt
-     *
-     * @return \DateTime 
-     */
-    public function getInsertedAt()
-    {
-        return $this->insertedAt;
-    }
-
-    /**
-     * Set updatedAt
-     *
-     * @param \DateTime $updatedAt
-     * @return User
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
-
-    /**
-     * Get updatedAt
-     *
-     * @return \DateTime 
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
     }
 }

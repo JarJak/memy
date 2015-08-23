@@ -1,8 +1,28 @@
 Memy\UserBundle\Entity\User:
     type:  entity
-    table: users
+    table: users #plural because user is sql reserved word
     id:
         id:
             type: integer
             generator:
                 strategy: AUTO
+    
+    fields:
+        insertedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                on: update
+                
+    manyToOne:
+        memes:
+            targetEntity: Memy\MemeBundle\Entity\Meme
+            mappedBy: user
+        tags:
+            targetEntity: Memy\MemeBundle\Entity\Tag
+            mappedBy: user

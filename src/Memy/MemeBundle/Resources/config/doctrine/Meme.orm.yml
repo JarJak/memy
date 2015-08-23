@@ -1,0 +1,49 @@
+Memy\MemeBundle\Entity\Meme:
+    type: entity
+    table: meme
+    repositoryClass: Memy\MemeBundle\Repository\MemeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    
+    fields:
+        filename:
+            type: string
+            length: 255
+        originalFilename:
+            type: text
+        userIp:
+            type: string
+            length: 255
+        title:
+            type: string
+            length: 255
+        description:
+            type: text
+        rate:
+            type: integer
+        insertedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                on: update
+    
+    manyToOne:
+        user:
+            targetEntity: Memy\UserBundle\Entity\User
+            inversedBy: memes
+
+    manyToMany:
+        tags:
+            targetEntity: Memy\MemeBundle\Entity\Tag
+            inversedBy: memes
+    
+    lifecycleCallbacks: {  }
