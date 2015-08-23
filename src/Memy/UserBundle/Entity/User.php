@@ -1,6 +1,6 @@
 <?php
 
-namespace MemyCoreBundle\Entity;
+namespace Memy\UserBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 

@@ -1,4 +1,4 @@
-MemyUserBundle\Entity\User:
+Memy\UserBundle\Entity\User:
     type:  entity
     table: users
     id:

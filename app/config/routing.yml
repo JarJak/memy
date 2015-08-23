@@ -1,11 +1,14 @@
-memy_user:
-    resource: "@MemyUserBundle/Resources/config/routing.yml"
-    prefix:   /
-
-memy_meme:
-    resource: "@MemyMemeBundle/Resources/config/routing.yml"
-    prefix:   /
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 memy_core:
     resource: "@MemyCoreBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix: /
+
+memy_meme:
+    resource: "@MemyMemeBundle/Resources/config/routing.yml"
+    prefix: /
+
+memy_user:
+    resource: "@MemyUserBundle/Resources/config/routing.yml"
+    prefix: /user

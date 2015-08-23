@@ -18,7 +18,8 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
-    #serializer:      { enable_annotations: true }
+    serializer:
+        enabled: true
     templating:
         engines: ['twig']
         #assets_version: SomeVersionScheme
@@ -75,6 +76,8 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        mappings:
+            FOSUserBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -83,3 +86,8 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Memy\UserBundle\Entity\User

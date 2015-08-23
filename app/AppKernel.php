@@ -17,11 +17,14 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             
-            /* added bundles below */
+            /* added 3rd party bundles below */
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             
-            /* Memy Bundles Below */
+            /* Memy bundles below */
             new Memy\CoreBundle\MemyCoreBundle(),
             new Memy\MemeBundle\MemyMemeBundle(),
             new Memy\UserBundle\MemyUserBundle(),
