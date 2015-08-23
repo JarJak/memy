@@ -12,3 +12,5 @@
 /nbproject/
 composer.lock
 *.php~
+dump.sql
+debug.txt

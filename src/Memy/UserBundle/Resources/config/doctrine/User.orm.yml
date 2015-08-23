@@ -19,7 +19,7 @@ Memy\UserBundle\Entity\User:
                 timestampable:
                 on: update
                 
-    manyToOne:
+    oneToMany:
         memes:
             targetEntity: Memy\MemeBundle\Entity\Meme
             mappedBy: user

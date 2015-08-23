@@ -1,0 +1,60 @@
+{% extends 'MemyCoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <h1>Meme</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Filename</th>
+                <td>{{ entity.filename }}</td>
+            </tr>
+            <tr>
+                <th>Originalfilename</th>
+                <td>{{ entity.originalFilename }}</td>
+            </tr>
+            <tr>
+                <th>Userip</th>
+                <td>{{ entity.userIp }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ entity.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Rate</th>
+                <td>{{ entity.rate }}</td>
+            </tr>
+            <tr>
+                <th>Insertedat</th>
+                <td>{{ entity.insertedAt|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{{ entity.updatedAt|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

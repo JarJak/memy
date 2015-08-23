@@ -21,12 +21,14 @@
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         
+        "twbs/bootstrap": "^3.3",
         "braincrafted/bootstrap-bundle": "dev-develop",
         "oyejorge/less.php": "v1.7.0.5",
         "knplabs/knp-menu-bundle": "~2",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "friendsofsymfony/rest-bundle": "^1.7",
-        "stof/doctrine-extensions-bundle": "^1.2"
+        "stof/doctrine-extensions-bundle": "^1.2",
+        "knplabs/knp-paginator-bundle": "^2.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

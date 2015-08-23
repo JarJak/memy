@@ -15,8 +15,8 @@ class Menu extends ContainerAware
             ),
         ));
 
-        $menu->addChild('Przeglądaj', array('route' => 'homepage'));
-        $menu->addChild('Dodaj', array('route' => 'meme_add'));
+        $menu->addChild('Przeglądaj', array('route' => 'meme_list'));
+        $menu->addChild('Dodaj', array('route' => 'meme_new'));
         $menu->addChild('Losuj i taguj', array('route' => 'meme_random'));
 
         /*

@@ -1,7 +1,3 @@
-meme_add:
-    path:     /dodaj
-    defaults: { _controller: MemyMemeBundle:Meme:add }
-    
-meme_random:
-    path:     /losuj
-    defaults: { _controller: MemyMemeBundle:Meme:random }
+meme:
+    resource: "@MemyMemeBundle/Resources/config/routing/meme.yml"
+    prefix:   /
