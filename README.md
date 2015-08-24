@@ -51,3 +51,10 @@ https://www.facebook.com/groups/508740382611596/
 4. Logowanie przez FB OAuth - na stronę i do panelu
   - opcja widoku moje memy
   - dodawanie memów do ulubionych
+
+1.2 FEATURES:
+--------------
+1. Elasticsearch
+  - http://stackoverflow.com/questions/16107605/how-to-do-facets-on-symfony2-foselasticabundle
+  - http://stackoverflow.com/questions/7256405/faceted-search-solr-vs-good-old-filtering-via-php
+  - https://github.com/FriendsOfSymfony/FOSElasticaBundle
