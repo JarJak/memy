@@ -1,0 +1,21 @@
+default:
+  suites:
+    global:
+        contexts:
+            - ApplicationContext: #global context for whole application
+                #session:   '@session' #you can inject symfony services to Context object cnstructor here!
+    memy_meme_suite: #bundle suite
+        type: symfony_bundle
+        bundle: MemyMemeBundle
+    memy_core_suite: #bundle suite
+        type: symfony_bundle
+        bundle: MemyCoreBundle
+    memy_user_suite: #bundle suite
+        type: symfony_bundle
+        bundle: MemyUserBundle
+  extensions:
+    Behat\Symfony2Extension: ~
+    Behat\MinkExtension:
+      sessions:
+        default:
+          symfony2: ~
