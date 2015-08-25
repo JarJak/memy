@@ -72,7 +72,7 @@ TEST SUITE
   - **location of .feature files:** ./src/Memy/MemeBundle/Features/ *< example*
   - **context class:** ./features/bootstrap/Memy/MemeBundle/Features/Context/FeatureContext.php *< example*
 
-### Usage and creating of new feature: ###
+### Usage and new feature creation: ###
 Web access is provided via MinkContext base class, which should be used as FeatureContext parent class by extension.
 MinkContext provides a set of helper steps like "I am on "/some-url-path"" or "I should see "some text"" (first provides navigation context, second provides full-page grep search).
 Full MinkContext step reference is available here: https://github.com/Behat/MinkExtension/blob/master/src/Behat/MinkExtension/Context/MinkContext.php
