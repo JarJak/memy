@@ -10,7 +10,8 @@
 /vendor/
 /web/bundles/
 /nbproject/
-/.idea/*
+/.idea/
+/node_modules/
 composer.lock
 *.php~
 dump.sql

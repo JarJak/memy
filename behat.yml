@@ -1,21 +1,25 @@
 default:
   suites:
-    global:
-        contexts:
-            - ApplicationContext: #global context for whole application
-                #session:   '@session' #you can inject symfony services to Context object cnstructor here!
+    integration: #integration suite
+      contexts:
+        - ApplicationContext: #global context for whole application
+            #session:   '@session' #you can inject symfony services to Context object cnstructor here!
     memy_meme_suite: #bundle suite
-        type: symfony_bundle
-        bundle: MemyMemeBundle
+      type: symfony_bundle
+      bundle: MemyMemeBundle
     memy_core_suite: #bundle suite
-        type: symfony_bundle
-        bundle: MemyCoreBundle
+      type: symfony_bundle
+      bundle: MemyCoreBundle
     memy_user_suite: #bundle suite
-        type: symfony_bundle
-        bundle: MemyUserBundle
+      type: symfony_bundle
+      bundle: MemyUserBundle
   extensions:
     Behat\Symfony2Extension: ~
     Behat\MinkExtension:
-      sessions:
-        default:
-          symfony2: ~
+      base_url: 'http://localhost:8000/app_dev.php'
+      default_session: selenium2
+      javascript_session: selenium2
+      selenium2:
+        wd_host: "http://localhost:4444/wd/hub"
+        browser: "firefox"
+        capabilities: { "browserName": "firefox", "browser": "firefox", "version":  "22" }
