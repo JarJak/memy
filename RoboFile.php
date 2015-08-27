@@ -33,6 +33,8 @@ class RoboFile extends \Robo\Tasks
 
     public function behat()
     {
+	$this->stopOnFail(true);	
+
         $this->taskExec('./node_modules/.bin/phantomjs --webdriver=4444 --webdriver-loglevel=WARNING')
             ->background()
             ->run();
