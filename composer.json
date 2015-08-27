@@ -20,7 +20,7 @@
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        
+
         "twbs/bootstrap": "^3.3",
         "braincrafted/bootstrap-bundle": "dev-develop",
         "oyejorge/less.php": "v1.7.0.5",
@@ -32,7 +32,16 @@
         "phpspec/phpspec": "^2.2"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "sensio/generator-bundle": "~2.3",
+        "behat/behat": "^3.0",
+        "behat/symfony2-extension": "^2.0",
+        "behat/mink": "^1.6",
+        "behat/mink-extension": "^2.0",
+        "behat/mink-browserkit-driver": "^1.2",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-zombie-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "codegyre/robo": "dev-master"
     },
     "scripts": {
         "post-root-package-install": [
