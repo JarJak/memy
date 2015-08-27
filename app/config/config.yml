@@ -36,6 +36,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        page_title: memy.tk - twój osobisty folder ze śmiesznymi obrazkami
 
 # Assetic Configuration
 assetic:

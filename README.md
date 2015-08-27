@@ -18,6 +18,7 @@ https://www.facebook.com/groups/508740382611596/
   - multiselect
   - drag and drop
   - możliwość wrzucenia calego folderu z memami
+  - http://blueimp.github.io/jQuery-File-Upload/index.html <- to można użyć
 3. Po wgraniu pliku/plików możliwość dodania tagów
   - http://timschlechter.github.io/bootstrap-tagsinput/examples/
 4. Lista wgranych memów:
