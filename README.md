@@ -1,5 +1,7 @@
 memy.tk - Skarbnica Memów
 =======
+[![Build Status](https://travis-ci.org/JarJak/memy.svg?branch=master)](https://travis-ci.org/JarJak/memy)
+[![Build Status](https://scrutinizer-ci.com/g/JarJak/memy/badges/build.png?b=master)](https://scrutinizer-ci.com/g/JarJak/memy/build-status/master)
 
 http://memy.tk/
 
