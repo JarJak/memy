@@ -13,7 +13,7 @@ https://www.facebook.com/groups/508740382611596/
 		- przeglądaj (główna)
 		- dodaj
 		- losuj i taguj
-2. Fomularz uploadu plików
+2. Fomularz uploadu plików 
   - select
   - multiselect
   - drag and drop
