@@ -41,7 +41,7 @@ class RoboFile extends \Robo\Tasks
             curl_close($ch);
 
             fclose($handle);
-            
+
             chmod($composerPharPath, 0755);
         }
 
@@ -69,7 +69,7 @@ class RoboFile extends \Robo\Tasks
             ->background()
             ->run();
 
-        $this->taskExec('app/console server:run localhost:8000')
+        $this->taskExec('php app/console server:run localhost:8000')
             ->background()
             ->run();
 
