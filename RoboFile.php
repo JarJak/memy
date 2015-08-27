@@ -50,6 +50,8 @@ class RoboFile extends \Robo\Tasks
             ->run();
 
         $this->npm();
+
+        $this->taskExec('php app/console assets:install --symlink')->run();
     }
 
     public function npm()
