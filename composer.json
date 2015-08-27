@@ -28,7 +28,8 @@
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "friendsofsymfony/rest-bundle": "^1.7",
         "stof/doctrine-extensions-bundle": "^1.2",
-        "knplabs/knp-paginator-bundle": "^2.4"
+        "knplabs/knp-paginator-bundle": "^2.4",
+        "phpspec/phpspec": "^2.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",

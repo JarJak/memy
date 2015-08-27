@@ -6,8 +6,6 @@ class LayoutController extends BaseController
 {
     public function indexAction()
     {
-        return $this->render('MemyCoreBundle:Layout:index.html.twig', [
-            'page_title' => "memy.tk - twój osobisty folder ze śmiesznymi obrazkami",
-        ]);
+        return $this->render('MemyCoreBundle:Layout:index.html.twig');
     }
 }
