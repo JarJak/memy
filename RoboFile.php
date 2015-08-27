@@ -51,8 +51,8 @@ class RoboFile extends \Robo\Tasks
 
         $this->npm();
 
-        $this->taskExec('app/console assets:install')->run();
-        $this->taskExec('app/console assetic:dump')->run();
+        $this->taskExec('php app/console assets:install')->run();
+        $this->taskExec('php app/console assetic:dump')->run();
 
     }
 
