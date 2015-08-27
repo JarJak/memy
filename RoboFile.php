@@ -50,10 +50,6 @@ class RoboFile extends \Robo\Tasks
             ->run();
 
         $this->npm();
-
-        $this->taskExec('php app/console assets:install')->run();
-        $this->taskExec('php app/console assetic:dump')->run();
-
     }
 
     public function npm()
@@ -73,7 +69,7 @@ class RoboFile extends \Robo\Tasks
             ->background()
             ->run();
 
-        $microSecondsToWait = (1 / 10) * 1000000; // 1/10 of second (100ms)
+        $microSecondsToWait = (2 / 10) * 1000000; // 2/10 of second (200ms)
         $this->say(sprintf('Waiting for %dms for phantomjs and php server to start.', $microSecondsToWait / 1000));
         usleep($microSecondsToWait);
 
