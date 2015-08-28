@@ -71,7 +71,7 @@ class RoboFile extends \Robo\Tasks
             ->background()
             ->run();
 
-        $microSecondsToWait = (2 / 10) * 1000000; // 2/10 of second (200ms)
+        $microSecondsToWait = 1 * 1000000; // just for test //(2 / 10) * 1000000; // 2/10 of second (200ms)
         $this->say(sprintf('Waiting for %dms for phantomjs and php server to start.', $microSecondsToWait / 1000));
         usleep($microSecondsToWait);
 
