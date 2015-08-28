@@ -17,9 +17,13 @@ matrix:
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+  - phantomjs --webdriver=4444 --ignore-ssl-errors=true --webdriver-loglevel=WARNING &
+  - if [ $TRAVIS_PHP_VERSION != 'hhvm' ]; then php app/console server:run 127.0.0.1:8000 & fi
+  - if [ $TRAVIS_PHP_VERSION == 'hhvm' ]; then hhvm -m server -v Server.Type=proxygen -vServer.Port=8000 -vServer.SourceRoot=$TRAVIS_PHP_VERSION/web & fi
+  - sleep 1
 
 script:
-  - bin/robo build
+  - ./bin/behat
 
 #    <!-- later or irrelevant, if not using phpunit for unit tests -->
 #after_script:

@@ -5,6 +5,7 @@ use Behat\Behat\Context\Context;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
+use Behat\Behat\Hook\Scope\AfterStepScope;
 use Behat\MinkExtension\Context\MinkContext;
 
 /**
@@ -32,6 +33,20 @@ class ApplicationContext extends MinkContext implements Context, SnippetAcceptin
     {
         // auth code goes here
         //throw new PendingException();
+    }
+
+    /**
+     * This hook should be placed in all contexts to allow easy debug on Travis CI
+     * @AfterStep
+     * @param AfterStepScope $event
+     */
+    public function outputHtmlAfterFailedStep(AfterStepScope $event)
+    {
+        if (!$event->getTestResult()->isPassed()) {
+            if ($this->getSession()->getDriver() instanceof \Behat\Mink\Driver\Selenium2Driver) {
+                var_dump($this->getSession()->getPage()->getHtml());
+            }
+        }
     }
 
 }
