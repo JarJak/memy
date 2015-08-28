@@ -16,7 +16,8 @@ default:
   extensions:
     Behat\Symfony2Extension: ~
     Behat\MinkExtension:
-      base_url: 'http://memy.dev:8000/app_test.php'
+      #base_url: 'http://memy.dev:8000/app_test.php'
+      base_url: 'http://127.0.0.1:8000/app_test.php'
       default_session: selenium2
       javascript_session: selenium2
       selenium2:

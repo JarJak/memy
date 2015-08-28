@@ -3,7 +3,6 @@ language: php
 php:
   - 5.6
   - 7.0
-  - hhvm
 
 # This triggers builds to run on the new TravisCI infrastructure.
 # See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
@@ -12,12 +11,11 @@ sudo: true
 matrix:
   allow_failures:
     - php: 7.0
-    - php: hhvm
 
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
-  - echo "127.0.0.1 memy.dev" | sudo tee -a /etc/hosts
+  #- echo "127.0.0.1 memy.dev" | sudo tee -a /etc/hosts
   - phantomjs --version
   - phantomjs --webdriver=4444 --ignore-ssl-errors=true --webdriver-loglevel=DEBUG &
   - php app/console cache:clear
@@ -28,7 +26,8 @@ before_script:
   - sleep 1
 
 script:
-  - curl http://memy.dev:8000/app_test.php
+  #- curl http://memy.dev:8000/app_test.php
+  - curl http://127.0.0.1:8000/app_test.php
   - ./bin/behat
 
 #    <!-- later or irrelevant, if not using phpunit for unit tests -->
