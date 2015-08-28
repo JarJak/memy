@@ -17,17 +17,14 @@ matrix:
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
-  - sudo apt-get update > /dev/null
-  - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl php5-mysql php5-intl
-  - sudo sed -i -e "/DocumentRoot/i\ServerName memy.tk" /etc/apache2/sites-available/default
   - echo "127.0.0.1 memy.dev" | sudo tee -a /etc/hosts
-  - sudo /etc/init.d/apache2 restart
   - phantomjs --version
   - phantomjs --webdriver=4444 --ignore-ssl-errors=true --webdriver-loglevel=DEBUG &
   - php app/console cache:clear
   - chmod -R 777 app/cache app/logs
   - php app/console --env=test cache:warmup
   - chmod -R 777 app/cache app/logs
+  - sudo php app/console server:run 127.0.0.1:80
   - sleep 1
 
 script:
