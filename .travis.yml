@@ -17,8 +17,7 @@ matrix:
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
-  - npm install
-  - ./node_modules/.bin/phantomjs --webdriver=4444 --webdriver-loglevel=ALL &
+  - phantomjs --webdriver=4444 --ignore-ssl-errors=true --webdriver-loglevel=DEBUG &
   - php app/console server:run localhost:8000 &
   - sleep 1
 
