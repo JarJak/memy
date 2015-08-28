@@ -63,7 +63,7 @@ class RoboFile extends \Robo\Tasks
     {
         $this->stopOnFail(true);
 
-        $this->taskExec('./node_modules/.bin/phantomjs --webdriver=4444 --webdriver-loglevel=WARNING')
+        $this->taskExec('./node_modules/.bin/phantomjs --webdriver=4444 --webdriver-loglevel=ALL')
             ->background()
             ->run();
 
