@@ -15,9 +15,8 @@ matrix:
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
-  #- echo "127.0.0.1 memy.dev" | sudo tee -a /etc/hosts
   - phantomjs --version
-  - phantomjs --webdriver=4444 --ignore-ssl-errors=true --webdriver-loglevel=DEBUG &
+  - phantomjs --webdriver=4444 --ignore-ssl-errors=true --webdriver-loglevel=WARNING &
   - php app/console cache:clear
   - chmod -R 777 app/cache app/logs
   - php app/console --env=test cache:warmup
@@ -26,8 +25,6 @@ before_script:
   - sleep 1
 
 script:
-  #- curl http://memy.dev:8000/app_test.php
-  - curl http://127.0.0.1:8000/app_test.php
   - ./bin/behat
 
 #    <!-- later or irrelevant, if not using phpunit for unit tests -->
