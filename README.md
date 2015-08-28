@@ -113,3 +113,7 @@ Run:
 or - on next runs:
 
     bin/robo behat
+
+**Debug tests**
+
+https://blogs.library.ucsf.edu/ckm/2014/05/14/see-your-failures-taking-screenshots-with-phantomjs-running-behat-tests/
