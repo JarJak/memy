@@ -12,7 +12,7 @@ sudo: false
 matrix:
   allow_failures:
     - php: 7.0
-    - php: hhvm-nightly
+    - php: hhvm
 
 before_script:
   - travis_retry composer self-update
@@ -24,8 +24,8 @@ before_script:
   - php app/console --env=test cache:warmup
   - chmod -R 777 app/cache app/logs
   - echo $TRAVIS_PHP_VERSION
-  - if [ $TRAVIS_PHP_VERSION != 'hhvm-nightly' ]; then php app/console server:run 127.0.0.1:8000 &; fi
-  - if [ $TRAVIS_PHP_VERSION == 'hhvm-nightly' ]; then hhvm -m server -v Server.Type=proxygen -vServer.Port=8000 -vServer.SourceRoot=$TRAVIS_PHP_VERSION/web &; fi
+  - if [ $TRAVIS_PHP_VERSION != 'hhvm' ]; then php app/console server:run 127.0.0.1:8000 & fi
+  - if [ $TRAVIS_PHP_VERSION == 'hhvm' ]; then hhvm -m server -v Server.Type=proxygen -vServer.Port=8000 -vServer.SourceRoot=$TRAVIS_PHP_VERSION/web & fi
   - sleep 1
 
 script:
