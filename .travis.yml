@@ -24,11 +24,11 @@ before_script:
   - chmod -R 777 app/cache app/logs
   - php app/console --env=test cache:warmup
   - chmod -R 777 app/cache app/logs
-  - sudo php app/console server:run 127.0.0.1:80
+  - php app/console server:run 127.0.0.1:8000
   - sleep 1
 
 script:
-  - curl http://memy.dev/app_test.php
+  - curl http://memy.dev:8000/app_test.php
   - ./bin/behat
 
 #    <!-- later or irrelevant, if not using phpunit for unit tests -->
