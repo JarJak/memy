@@ -23,6 +23,7 @@ before_script:
   - sleep 1
 
 script:
+  - curl http://localhost:8000/app_test.php
   - ./bin/behat
 
 #    <!-- later or irrelevant, if not using phpunit for unit tests -->
