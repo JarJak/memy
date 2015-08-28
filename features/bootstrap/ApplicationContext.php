@@ -36,14 +36,6 @@ class ApplicationContext extends MinkContext implements Context, SnippetAcceptin
     }
 
     /**
-     * @BeforeStep
-     */
-    public function waitForWebPage($event)
-    {
-        $this->getSession()->wait(2000);
-    }
-
-    /**
      * This hook should be placed in all contexts to allow easy debug on Travis CI
      * @AfterStep
      * @param AfterStepScope $event
