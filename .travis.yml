@@ -3,6 +3,7 @@ language: php
 php:
   - 5.6
   - 7.0
+  - hhvm-nightly
 
 # This triggers builds to run on the new TravisCI infrastructure.
 # See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
@@ -11,6 +12,7 @@ sudo: false
 matrix:
   allow_failures:
     - php: 7.0
+    - php: hhvm-nightly
 
 before_script:
   - travis_retry composer self-update
@@ -21,7 +23,9 @@ before_script:
   - chmod -R 777 app/cache app/logs
   - php app/console --env=test cache:warmup
   - chmod -R 777 app/cache app/logs
-  - php app/console server:run 127.0.0.1:8000 &
+  - echo $TRAVIS_PHP_VERSION
+  - if [ $TRAVIS_PHP_VERSION != 'hhvm-nightly' ]; then php app/console server:run 127.0.0.1:8000 &; fi
+  - if [ $TRAVIS_PHP_VERSION == 'hhvm-nightly' ]; then hhvm -m server -v Server.Type=proxygen -vServer.Port=8000 -vServer.SourceRoot=$TRAVIS_PHP_VERSION/web &; fi
   - sleep 1
 
 script:
