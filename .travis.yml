@@ -20,6 +20,7 @@ before_script:
   - npm install
   - ./node_modules/.bin/phantomjs --webdriver=4444 --webdriver-loglevel=ALL &
   - php app/console server:run localhost:8000 &
+  - sleep 1
 
 script:
   - ./bin/behat
