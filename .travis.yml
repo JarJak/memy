@@ -17,9 +17,11 @@ matrix:
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+  - ./node_modules/.bin/phantomjs --webdriver=4444 --webdriver-loglevel=ALL &
+  - php app/console server:run localhost:8000 &
 
 script:
-  - bin/robo build
+  - ./bin/behat
 
 #    <!-- later or irrelevant, if not using phpunit for unit tests -->
 #after_script:
