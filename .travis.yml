@@ -19,6 +19,7 @@ before_script:
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
   - phantomjs --webdriver=4444 --ignore-ssl-errors=true --webdriver-loglevel=DEBUG &
   - php app/console server:run localhost:8000 &
+  - php app/console cache:clear
   - sleep 1
 
 script:
