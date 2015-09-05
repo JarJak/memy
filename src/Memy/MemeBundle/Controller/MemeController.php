@@ -44,12 +44,14 @@ class MemeController extends Controller
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
+        if ($form->isValid() && $form['filename']->getData()) {
+            $dir = $this->get('kernel')->getRootDir() . '/../web/uploads/memes/';
+            $form['filename']->getData()->move($dir);
+            $entity->setOriginalFilename($form['filename']->getData());
+            $entity->setUserIp($request->getClientIp());
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
-
-            return $this->redirect($this->generateUrl('meme_show', array('id' => $entity->getId())));
         }
 
         return $this->render('MemyMemeBundle:Meme:new.html.twig', array(

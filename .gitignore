@@ -9,6 +9,8 @@
 /composer.phar
 /vendor/
 /web/bundles/
+/web/uploads/memes/*
+!/web/uploads/memes/.gitkeep
 /nbproject/
 /.idea/
 /node_modules/
@@ -17,3 +19,4 @@ composer.lock
 dump.sql
 debug.txt
 /build/
+tests/_output/*

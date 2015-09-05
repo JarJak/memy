@@ -1,8 +1,14 @@
 {% extends 'MemyCoreBundle::layout.html.twig' %}
 
 {% block content %}
-    <h1>Meme creation</h1>
+    {% if entity.filename %}
+        <h1>Mem został dodany.</h1>
+        <img src="uploads/memes/{{ entity.filename }}">
+        <h2>Dodaj kolejny:</h2>
 
+    {% else %}
+        <h1>Dodaj mem</h1>
+    {% endif %}
     {{ form(form) }}
 
 {% endblock %}

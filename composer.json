@@ -29,7 +29,7 @@
         "friendsofsymfony/rest-bundle": "^1.7",
         "stof/doctrine-extensions-bundle": "^1.2",
         "knplabs/knp-paginator-bundle": "^2.4",
-        "phpspec/phpspec": "^2.2"
+        "gedmo/doctrine-extensions": "^2.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
@@ -41,7 +41,11 @@
         "behat/mink-goutte-driver": "*",
         "behat/mink-zombie-driver": "*",
         "behat/mink-selenium2-driver": "*",
-        "codegyre/robo": "dev-master"
+        "codegyre/robo": "dev-master",
+        "phpspec/phpspec": "^2.2",
+        "codeception/codeception": "^2.1",
+        "site5/phantoman": "^1.0",
+        "jakoch/phantomjs-installer": "1.9.7"
     },
     "scripts": {
         "post-root-package-install": [
@@ -55,7 +59,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
             "Braincrafted\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::install",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
+            "PhantomInstaller\\Installer::installPhantomJS"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -65,7 +70,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
             "Braincrafted\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::install",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
+            "PhantomInstaller\\Installer::installPhantomJS"
         ]
     },
     "config": {

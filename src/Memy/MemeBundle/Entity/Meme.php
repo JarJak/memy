@@ -35,14 +35,9 @@ class Meme
     private $title;
 
     /**
-     * @var string
-     */
-    private $description;
-
-    /**
      * @var integer
      */
-    private $rate;
+    private $rate = 0;
 
     /**
      * @var \DateTime
@@ -175,29 +170,6 @@ class Meme
     }
 
     /**
-     * Set description
-     *
-     * @param string $description
-     * @return Meme
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
      * Set rate
      *
      * @param integer $rate
@@ -221,19 +193,6 @@ class Meme
     }
 
     /**
-     * Set insertedAt
-     *
-     * @param \DateTime $insertedAt
-     * @return Meme
-     */
-    public function setInsertedAt($insertedAt)
-    {
-        $this->insertedAt = $insertedAt;
-
-        return $this;
-    }
-
-    /**
      * Get insertedAt
      *
      * @return \DateTime 
@@ -241,19 +200,6 @@ class Meme
     public function getInsertedAt()
     {
         return $this->insertedAt;
-    }
-
-    /**
-     * Set updatedAt
-     *
-     * @param \DateTime $updatedAt
-     * @return Meme
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
     }
 
     /**

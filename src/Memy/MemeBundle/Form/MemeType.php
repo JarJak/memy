@@ -15,11 +15,18 @@ class MemeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('filename')
-            ->add('originalFilename')
-            ->add('title')
-            ->add('description')
-            ->add('tags')
+            ->add('filename', 'file', [
+                //'multiple' => true,
+                'required' => true,
+            ])
+            ->add('tags', 'entity', [
+                'class' => 'Memy\MemeBundle\Entity\Meme',
+                'multiple' => true,
+                'required' => false,
+            ])
+            ->add('title', 'text', [
+                'required' => false,
+            ])
         ;
     }
     

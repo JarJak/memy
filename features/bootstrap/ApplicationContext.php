@@ -44,6 +44,7 @@ class ApplicationContext extends MinkContext implements Context, SnippetAcceptin
     {
         if (!$event->getTestResult()->isPassed()) {
             if ($this->getSession()->getDriver() instanceof \Behat\Mink\Driver\Selenium2Driver) {
+                var_dump($this->getSession()->getCurrentUrl());
                 var_dump($this->getSession()->getPage()->getHtml());
             }
         }

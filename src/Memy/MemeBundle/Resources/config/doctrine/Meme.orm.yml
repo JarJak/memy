@@ -21,8 +21,7 @@ Memy\MemeBundle\Entity\Meme:
         title:
             type: string
             length: 255
-        description:
-            type: text
+            nullable: true
         rate:
             type: integer
         insertedAt:
