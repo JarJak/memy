@@ -11,6 +11,10 @@
 /web/bundles/
 /web/uploads/memes/*
 !/web/uploads/memes/.gitkeep
+/web/js/*
+!/web/js/scripts.js
+/web/css/*
+!/web/css/styles.css
 /nbproject/
 /.idea/
 /node_modules/
